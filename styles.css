@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.invoice-box {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  display: none;
+}
+
+.invoice-box h3 {
+  text-align: center;
+}
+
+.invoice-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-box th,
+.invoice-box td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.invoice-box th {
+  background-color: #f2f2f2;
+}
+
+@media print {
+  body * {
+    visibility: hidden; /* Sembunyikan semua elemen saat mencetak */
+  }
+  .invoice-box,
+  .invoice-box * {
+    visibility: visible; /* Hanya tampilkan invoice box dan isinya saat mencetak */
+  }
+  .invoice-box {
+    position: absolute;
+    left: 0;
+    top: 0; /* Tempatkan invoice box di sudut kiri atas */
+  }
+}
